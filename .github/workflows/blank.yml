@@ -30,6 +30,7 @@ jobs:
         run: |
           wget https://www.uupdump.net/get.php?id=43179438-8021-401a-9fff-2f85f35aa946&pack=zh-cn&edition=professional
           sudo apt-get install unzip
+          sudo apt-get install aria2 cabextract wimtools chntpw genisoimage
           unzip *.zip
           bash uup_download_linux.sh
 
