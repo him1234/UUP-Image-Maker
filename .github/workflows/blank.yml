@@ -52,7 +52,7 @@ jobs:
         with:
           file: Windows10-Dev-latest.ISO
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.RELEASES_TOKEN }}
           
       - uses: majkrzak/create-release@master
         with:
