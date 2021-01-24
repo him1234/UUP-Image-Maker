@@ -44,8 +44,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           ls -h
-          ls
-          cp *.ISO ./artifact/
+          mkdir latest
           mv *.ISO Windows10-Dev-latest.ISO
           
       - uses: majkrzak/create-release@master
@@ -56,5 +55,6 @@ jobs:
             prerelease: true
             assets: >
                     Windows10-Dev-latest.ISO:Windows10-Dev-latest.ISO
-            
+      
+
 
