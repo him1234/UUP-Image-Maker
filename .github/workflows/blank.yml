@@ -33,7 +33,7 @@ jobs:
           sudo apt-get install aria2 cabextract wimtools chntpw genisoimage
           unzip *.zip
           sudo mkdir /mnt/win10
-          sudo cp * /mnt/win10
+          sudo cp -rf * /mnt/win10
           sudo cd /mnt/win10 
           sudo bash uup_download_linux.sh
 
