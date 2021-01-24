@@ -50,7 +50,7 @@ jobs:
       - name: Upload release
         uses: yakuhzi/action-release@v1
         with:
-          file: Windows10-Dev-latest.ISO
+          file: /home/runner/work/win10imagelastest/win10imagelastest/Windows10-Dev-latest.ISO
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASES_TOKEN }}
           
