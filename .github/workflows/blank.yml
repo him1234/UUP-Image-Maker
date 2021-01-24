@@ -34,7 +34,7 @@ jobs:
           unzip *.zip
           sudo mkdir /mnt/win10
           sudo cp -rf * /mnt/win10
-          sudo cd /mnt/win10 
+          cd /mnt/win10 
           sudo bash uup_download_linux.sh
 
       # Runs a set of commands using the runners shell
