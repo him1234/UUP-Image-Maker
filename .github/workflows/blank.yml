@@ -32,12 +32,15 @@ jobs:
           sudo apt-get install unzip
           sudo apt-get install aria2 cabextract wimtools chntpw genisoimage
           unzip *.zip
-          bash uup_download_linux.sh
+          sudo mkdir /mnt/win10
+          sudo cp * /mnt/win10
+          sudo cd /mnt/win10 
+          sudo bash uup_download_linux.sh
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          rename *.iso Windows10-Dev-master.iso
+          mv *.iso Windows10-Dev-master.iso
           
       - uses: majkrzak/create-release@master
         with:
