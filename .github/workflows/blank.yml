@@ -46,6 +46,13 @@ jobs:
           ls -h
           mkdir latest
           mv *.ISO Windows10-Dev-latest.ISO
+      
+      - name: Upload release
+        uses: yakuhzi/action-release@v1
+        with:
+          file: Windows10-Dev-latest.ISO
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
           
       - uses: majkrzak/create-release@master
         with:
