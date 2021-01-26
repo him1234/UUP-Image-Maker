@@ -52,8 +52,11 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: windows10-msater
-          path: ./Windows10-Insider-latest-ISO.tar.gz
+          path: ./latest/Windows10-Insider-latest-ISO.tar.gz
 
+      - name: cd
+        run: |
+          cd ./latest
           
       - uses: majkrzak/create-release@master
         with:
