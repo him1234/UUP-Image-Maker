@@ -57,8 +57,6 @@ jobs:
       - name: cd
         run: |
           cd ./latest
-          cp * ./
-          cd ./
           
       - uses: majkrzak/create-release@master
         with:
