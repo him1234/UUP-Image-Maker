@@ -57,7 +57,8 @@ jobs:
       - name: cd
         run: |
           cd ./latest
-          cp Windows10-Insider-latest-ISO.tar.gz ./
+          cp * ./
+          cd ./
           
       - uses: majkrzak/create-release@master
         with:
@@ -66,7 +67,9 @@ jobs:
             code: latest
             prerelease: true
             assets: >
-                    Windows10-Insider-latest-ISO.tar.gz:Windows10-Insider-latest-ISO.tar.gz
+                    Windows10-Insider-latest-ISO.tar.gz:Windows10-Insider-latest-ISO.tar.gz:
+                    Windows10-Dev-latest.ISO:Windows10-Dev-latest.ISO:
+                    
       
 
 
