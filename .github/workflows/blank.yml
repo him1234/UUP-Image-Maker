@@ -56,7 +56,8 @@ jobs:
 
       - name: cd
         run: |
-          cd ./latest
+          cd /home/runner/work/win10imagelastest/win10imagelastest/latest
+          cp * /home/runner/work/win10imagelastest/win10imagelastest/
           
       - uses: majkrzak/create-release@master
         with:
