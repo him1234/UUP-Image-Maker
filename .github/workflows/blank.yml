@@ -54,20 +54,20 @@ jobs:
           name: windows10-msater
           path: ./latest/Windows10-Insider-latest-ISO.tar.gz
 
-      - name: cd
-        run: |
-          cd /home/runner/work/win10imagelastest/win10imagelastest/latest
-          cp * /home/runner/work/win10imagelastest/win10imagelastest/
+   #   - name: cd
+   #     run: |
+    #     cd /home/runner/work/win10imagelastest/win10imagelastest/latest
+    #     cp * /home/runner/work/win10imagelastest/win10imagelastest/
           
-      - uses: majkrzak/create-release@master
-        with:
-            token: ${{secrets.RELEASES_TOKEN}}
-            name: windows10 msater
-            code: latest
-            prerelease: true
-            assets: >
-                    Windows10-Insider-latest-ISO.tar.gz:Windows10-Insider-latest-ISO.tar.gz:
-                    Windows10-Dev-latest.ISO:Windows10-Dev-latest.ISO:
+   #   - uses: majkrzak/create-release@master
+  #    with:
+  #        token: ${{secrets.RELEASES_TOKEN}}
+  #        name: windows10 msater
+  #        code: latest
+  #        prerelease: true
+  #        assets: >
+  #                 Windows10-Insider-latest-ISO.tar.gz:Windows10-Insider-latest-ISO.tar.gz:
+  #                Windows10-Dev-latest.ISO:Windows10-Dev-latest.ISO:
                     
       
 
