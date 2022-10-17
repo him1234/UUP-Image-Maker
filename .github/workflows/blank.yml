@@ -27,7 +27,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Download Files
         run: |
-          ver
+          "ver" | cmd 
           wmic diskdrive
           unzip *.zip
           dir
