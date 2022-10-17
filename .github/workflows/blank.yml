@@ -17,7 +17,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: windows-latest
+    runs-on: windows-2022
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -27,6 +27,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Download Files
         run: |
+          $PSVersionTable
           unzip *.zip
           dir
           ./wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.6/PowerShell-7.2.6-win-x64.msi 
