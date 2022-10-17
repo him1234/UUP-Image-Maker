@@ -28,8 +28,10 @@ jobs:
       - name: Download Files
         run: |
           "ver" | cmd 
-          wmic diskdrive
           df -h
+          mv *.zip C:\
+          C:
+          cd C:\
           unzip *.zip
           dir
           "uup_download_windows.cmd" | cmd 
@@ -44,6 +46,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Generate Image
         run: |
+          C:
+          cd C:\
           ls -h
           mkdir latest
           mv *.ISO latest/Windows-Dev-latest.ISO
