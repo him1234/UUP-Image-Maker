@@ -28,7 +28,7 @@ jobs:
       - name: Download Files
         run: |
           $PSVersionTable
-          $env:PSModulePath = \"$PSHOME/Modules\"
+          $env:PSModulePath = "$PSHOME/Modules"
           unzip *.zip
           dir
           "uup_download_windows.cmd" | cmd 
