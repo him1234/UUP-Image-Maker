@@ -27,8 +27,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Download Files
         run: |
-          $PSVersionTable
-          $env:PSModulePath = "$PSHOME/Modules"
+          ver
+          wmic diskdrive
           unzip *.zip
           dir
           "uup_download_windows.cmd" | cmd 
