@@ -29,6 +29,7 @@ jobs:
         run: |
           "ver" | cmd 
           wmic diskdrive
+          df -h
           unzip *.zip
           dir
           "uup_download_windows.cmd" | cmd 
