@@ -63,8 +63,17 @@ jobs:
         uses: fnkr/github-action-ghr@v1
         if: startsWith(github.ref, 'refs/tags/')
         env:
-          GHR_PATH: C:\latest\Windows-Dev-latest.ISO
+          GHR_PATH: C:\latest\
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Upload release
+        uses: yakuhzi/action-release@v1
+        with:
+          file: C:\latest\Windows-Dev-latest.ISO
+        
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
    #   - name: cd
    #     run: |
     #     cd /home/runner/work/win10imagelastest/win10imagelastest/latest
