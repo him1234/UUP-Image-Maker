@@ -57,7 +57,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: windows10-msater
-          path: latest/Windows-Dev-latest.ISO
+          path: C:\latest\Windows-Dev-latest.ISO
 
    #   - name: cd
    #     run: |
